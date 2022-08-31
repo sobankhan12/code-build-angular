@@ -17,6 +17,4 @@ phases:
   post_build:
     commands:
       - echo Build completed on `date`
-artifacts:
-  files:
-    - target/messageUtil-1.0.jar
+      - aws s3 sync dist/my-app s3://soban-github-angualar --delete
